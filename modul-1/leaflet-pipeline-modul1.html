@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #header { padding: 10px; text-align: center; font-size: 1.2em; }
+    #map { height: calc(100vh - 50px); }
+  </style>
+</head>
+<body>
+  <div id="header">Evolució de la temperatura mitjana anual de les capitals catalanes dels últims 26 anys (2000-2025)</div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([41.8, 1.5], 8);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var contingutBarcelona = `
+      <b>Barcelona</b><br>
+      Mitjana 2000-2025: 16.07 °C<br>
+      Tendència: +0.056 °C/any<br>
+      Font: Open-Meteo (CC BY 4.0)<br>
+      <b>Clica el gràfic per fer-lo més gran</b><br>
+      <a href="sortides/Barcelona.png" target="_blank">
+        <img src="sortides/Barcelona.png" style="width:250px;">
+      </a>      
+      `;
+
+    var contingutLleida = `
+      <b>Lleida</b><br>
+      Mitjana 2000-2025: 15.89 °C<br>
+      Tendència: +0.062 °C/any<br>
+      Font: Open-Meteo (CC BY 4.0)<br>
+      <b>Clica el gràfic per fer-lo més gran</b><br>
+      <a href="sortides/Lleida.png" target="_blank">
+        <img src="sortides/Lleida.png" style="width:250px;">
+      </a>      
+      `;
+    
+    var contingutTarragona = `
+      <b>Tarragona</b><br>
+      Mitjana 2000-2025: 16.40 °C<br>
+      Tendència: +0.064 °C/any<br>
+      Font: Open-Meteo (CC BY 4.0)<br>
+      <b>Clica el gràfic per fer-lo més gran</b><br>
+      <a href="sortides/Tarragona.png" target="_blank">
+        <img src="sortides/Tarragona.png" style="width:250px;">
+      </a>      
+      `;
+
+    var contingutGirona = `
+      <b>Girona</b><br>
+      Mitjana 2000-2025: 15.42 °C<br>
+      Tendència: +0.049 °C/any<br>
+      Font: Open-Meteo (CC BY 4.0)<br>
+      <b>Clica el gràfic per fer-lo més gran</b><br>
+      <a href="sortides/Girona.png" target="_blank">
+        <img src="sortides/Girona.png" style="width:250px;">
+      </a>      
+      `;
+
+    
+    L.marker([41.3874, 2.1686]).addTo(map).bindPopup(contingutBarcelona, {maxWidth: 300});
+    L.marker([41.6167, 0.622]).addTo(map).bindPopup(contingutLleida, {maxWidth: 300});
+    L.marker([41.115696, 1.249594]).addTo(map).bindPopup(contingutTarragona, {maxWidth: 300});
+    L.marker([41.979401, 2.821426]).addTo(map).bindPopup(contingutGirona, {maxWidth: 300});
+
+  </script>
+</body>
+</html>
