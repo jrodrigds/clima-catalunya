@@ -10,7 +10,7 @@ This repo is my build-in-public log for the *Modern GIS* roadmap — one module 
 |---|---|---|---|---|
 | 0 | Terminal, git, environments, Docker | done | Repo setup, clean structure | 2026-06-30 |
 | R | Research & sourcing | done | Foundation sheet (dataset + norm + method) | 2026-07-02 |
-| 1 | Python + pandas | in progress | Temperature trend pipeline (Open-Meteo) + Leaflet showcase map | — |
+| 1 | Python + pandas | in progress | [Temperature trend pipeline (Open-Meteo) + Leaflet showcase map](https://jrodrigds.github.io/clima-catalunya/modul-1/leaflet-pipeline-modul1.html) | — |
 | 2 | SQL + Supabase | not started | — | — |
 | 3 | PostGIS | not started | — | — |
 | 4 | GeoPandas + raster | not started | — | — |
