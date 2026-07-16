@@ -5,3 +5,5 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 practica
+anaconda_projects
+.virtual_documents
